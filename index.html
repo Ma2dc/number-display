@@ -13,10 +13,14 @@
         }
 
         function updateNumber() {
-            document.getElementById('number').innerText = getRandomNumber();
+            const number = getRandomNumber();
+            const greenDots = '🟢'.repeat(number);
+            const redDots = '🔴'.repeat(10 - number);
+            document.getElementById('number').innerText = `${number}:${greenDots}${redDots}`;
         }
 
         setInterval(updateNumber, 500);
     </script>
 </body>
 </html>
+
